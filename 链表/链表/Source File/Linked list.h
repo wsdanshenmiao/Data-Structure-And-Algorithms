@@ -1,4 +1,10 @@
-struct Node;	//链表的声明
+#include <stdbool.h>
+
+typedef struct Node
+{
+	int m_Data;
+	struct Node* m_Next;
+}Node;
 bool IsEmpty(const Node* const list);	//判断链表是否为空
 bool IsLast(const Node* const position);	//判断该节点是否为最后一个节点
 Node* Find(const int data, const Node* list);	//查找某个元素

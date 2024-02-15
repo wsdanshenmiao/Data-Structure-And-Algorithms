@@ -144,6 +144,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Source File\Linked list.c" />
+    <ClCompile Include="Source File\main.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Source File\Linked list.h" />

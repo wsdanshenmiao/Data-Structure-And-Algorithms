@@ -2,8 +2,6 @@
 #include <stdlib.h>
 #include <assert.h>
 
-#define MALLOC(T) ((T*)malloc(sizeof(T)))
-
 typedef struct Node	//链表的定义
 {
 	int m_Data;
@@ -87,7 +85,7 @@ void Delete(const int data, Node* const list)	//删除某个元素
 void Insert(const int data, Node* position)	//插入某个元素
 {
 	assert(position);
-	Node* tmp = MALLOC(Node);
+	Node* tmp = (Node*)malloc(sizeof(Node));
 	if (tmp == NULL) {
 		return;
 	}
@@ -140,22 +138,4 @@ Node* DeleteList(Node* list)	//删除整个链表
 		list = tmp;
 	}
 	return list;
-}
-
-int main()
-{
-	Node* list = MALLOC(Node);
-	list->m_Next = NULL;
-	IsEmpty(list);
-	IsLast(list);
-	Insert(3, list);
-	Insert(4, Find(3, list));
-	Find(3, list);
-	Retrieve(list->m_Next);
-	Delete(3, list);
-	list = MakeEmpty(list);
-	Insert(1, list);
-	list = DeleteList(list);
-
-	return 0;
 }

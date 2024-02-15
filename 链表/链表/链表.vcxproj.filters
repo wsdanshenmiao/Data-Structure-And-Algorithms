@@ -18,6 +18,9 @@
     <ClCompile Include="Source File\Linked list.c">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="Source File\main.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Source File\Linked list.h">
