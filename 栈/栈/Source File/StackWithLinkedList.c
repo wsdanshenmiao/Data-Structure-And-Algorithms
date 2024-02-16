@@ -1,20 +1,17 @@
 //使用链表实现栈
-#include <stdbool.h>
-#include <stdlib.h>
-#include <assert.h>
-
-typedef struct Node
+#include "StackWithLinkedList.h"
+struct Node
 {
 	int m_Data;
 	struct Node* m_Next;
-}Node;
+};
 
-bool IsEmpty(Node* stack)	//判断栈是否为空
+inline bool l_IsEmpty(Node* stack)	//判断栈是否为空
 {
 	return stack->m_Next == NULL;
 }
 
-Node* CreateStack()	//创建一个栈
+Node* l_CreateStack()	//创建一个栈
 {
 	Node* stack = (Node*)malloc(sizeof(Node));
 	if (!stack) {
@@ -24,7 +21,7 @@ Node* CreateStack()	//创建一个栈
 	return stack;
 }
 
-void Push(int data, Node* stack)	//入栈
+void l_Push(int data, Node* stack)	//入栈
 {
 	Node* tmp = (Node*)malloc(sizeof(Node));
 	if (!tmp) {
@@ -35,33 +32,33 @@ void Push(int data, Node* stack)	//入栈
 	stack->m_Next = tmp;
 }
 
-void Pop(Node* stack)	//出栈
+void l_Pop(Node* stack)	//出栈
 {
-	assert(!IsEmpty(stack));
+	assert(!l_IsEmpty(stack));
 	Node* tmp = stack->m_Next;
 	stack->m_Next = tmp->m_Next;
 	free(tmp);
 	tmp = NULL;
 }
 
-void MakeEmpty(Node* stack)	//清空栈区
+void l_MakeEmpty(Node* stack)	//清空栈区
 {
 	assert(stack);
-	while (!IsEmpty(stack)) {
-		Pop(stack);
+	while (!l_IsEmpty(stack)) {
+		l_Pop(stack);
 	}
 }
 
-int Top(Node* stack)	//返回栈顶
+int l_Top(Node* stack)	//返回栈顶
 {
-	assert(!IsEmpty(stack));
+	assert(!l_IsEmpty(stack));
 	return stack->m_Next->m_Data;
 }
 
-Node* DisposeStack(Node* stack)
+Node* l_DisposeStack(Node* stack)	//删除整个栈
 {
-	if (!IsEmpty(stack)) {
-		MakeEmpty(stack);
+	if (!l_IsEmpty(stack)) {
+		l_MakeEmpty(stack);
 	}
 	free(stack);
 	stack = NULL;
