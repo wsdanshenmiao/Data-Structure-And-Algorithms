@@ -13,6 +13,7 @@ void l_Pop(Node* stack);
 void l_MakeEmpty(Node* stack);
 int l_Top(Node* stack);
 Node* l_DisposeStack(Node* stack);
+int l_TopAndPop(Node* stack);
 
 #endif // !__STRACKWITHLINKEDLIST__H__
 

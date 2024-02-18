@@ -1,26 +1,32 @@
 #include "StackWithLinkedList.h"
 #include "StackWithArray.h"
 #include <stdio.h>
+#include "Detection.h"
 
 #define MALLOC(T) ((T*)malloc(sizeof(T)))
 
 int main()
 {
-	Array* stack = a_CreateStack(10);
-	a_IsEmpty(stack);
-	for (int i = 0; i < 10; i++) {
-		a_Push(i, stack);
-	}
-	a_IsFull(stack);
-	a_Pop(stack);
-	a_Pop(stack);
-	printf("%d", a_TopAndPop(stack));
-	printf("%d", a_Top(stack));
-	a_MakeEmpty(stack);
-	stack = a_DisposeStack(stack);
-	
-	return 0;
+	Detection("[{(CLANNAD)]AIR");	//栈的平衡符号应用
 }
+
+//int main()
+//{
+//	Array* stack = a_CreateStack(10);
+//	a_IsEmpty(stack);
+//	for (int i = 0; i < 10; i++) {
+//		a_Push(i, stack);
+//	}
+//	a_IsFull(stack);
+//	a_Pop(stack);
+//	a_Pop(stack);
+//	printf("%d", a_TopAndPop(stack));
+//	printf("%d", a_Top(stack));
+//	a_MakeEmpty(stack);
+//	stack = a_DisposeStack(stack);
+//	
+//	return 0;
+//}
 
 //int main()
 //{

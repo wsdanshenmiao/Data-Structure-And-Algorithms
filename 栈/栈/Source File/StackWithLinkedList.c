@@ -64,3 +64,14 @@ Node* l_DisposeStack(Node* stack)	//É¾³ýÕû¸öÕ»
 	stack = NULL;
 	return stack;
 }
+
+int l_TopAndPop(Node* stack)
+{
+	assert(!l_IsEmpty(stack));
+	int data = stack->m_Next->m_Data;
+	Node* tmp = stack->m_Next;
+	stack->m_Next = tmp->m_Next;
+	free(tmp);
+	tmp = NULL;
+	return data;
+}

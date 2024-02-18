@@ -2,9 +2,9 @@
 
 struct Array
 {
-	int m_Capacity;
-	int m_Top;
-	int* m_Array;
+	int m_Capacity;	//数组的容量
+	int m_Top;	//指向栈顶
+	int* m_Array;	//栈
 };
 
 inline bool a_IsEmpty(Array* stack)	//判断栈区是否为空

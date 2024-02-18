@@ -1,4 +1,5 @@
-﻿  StackWithArray.c
+﻿  Detection.c
+D:\Git版本管理\数据结构\栈\栈\Source File\Detection.c(8,8): warning C4090: “初始化”: 不同的“const”限定符
   main.c
   正在生成代码...
   栈.vcxproj -> D:\Git版本管理\数据结构\栈\Build\bin\x64\Debug\栈.exe
