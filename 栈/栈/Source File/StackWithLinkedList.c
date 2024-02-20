@@ -1,10 +1,5 @@
 //使用链表实现栈
 #include "StackWithLinkedList.h"
-struct Node
-{
-	int m_Data;
-	struct Node* m_Next;
-};
 
 inline bool l_IsEmpty(Node* stack)	//判断栈是否为空
 {

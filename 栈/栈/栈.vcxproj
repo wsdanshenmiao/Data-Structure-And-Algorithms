@@ -145,11 +145,13 @@
   <ItemGroup>
     <ClCompile Include="Source File\Detection.c" />
     <ClCompile Include="Source File\main.c" />
+    <ClCompile Include="Source File\PostfixNotation.c" />
     <ClCompile Include="Source File\StackWithArray.c" />
     <ClCompile Include="Source File\StackWithLinkedList.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Source File\Detection.h" />
+    <ClInclude Include="Source File\PostfixNotation.h" />
     <ClInclude Include="Source File\StackWithArray.h" />
     <ClInclude Include="Source File\StackWithLinkedList.h" />
   </ItemGroup>

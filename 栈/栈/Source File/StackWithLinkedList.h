@@ -5,7 +5,11 @@
 #include <stdlib.h>
 #include <assert.h>
 
-typedef struct Node Node;
+typedef struct Node
+{
+	int m_Data;
+	struct Node* m_Next;
+}Node;
 inline bool l_IsEmpty(Node* stack);	//判断栈是否为空
 Node* l_CreateStack();	//创建一个栈
 void l_Push(int data, Node* stack);

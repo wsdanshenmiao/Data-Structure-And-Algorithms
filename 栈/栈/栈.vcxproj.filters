@@ -27,6 +27,9 @@
     <ClCompile Include="Source File\Detection.c">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="Source File\PostfixNotation.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Source File\StackWithLinkedList.h">
@@ -36,6 +39,9 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="Source File\Detection.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Source File\PostfixNotation.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>

@@ -2,13 +2,27 @@
 #include "StackWithArray.h"
 #include <stdio.h>
 #include "Detection.h"
+#include "PostfixNotation.h"
 
 #define MALLOC(T) ((T*)malloc(sizeof(T)))
 
 int main()
 {
-	Detection("[{(CLANNAD)]AIR");	//栈的平衡符号应用
+	//测试
+	const char* infix1 = "10+80+60";
+	printf("%d\n", PostfixNotation(infix1));
+	const char* infix2 = "12 + 2 * 3 + ( 3 * 4 + 14 ) * 4";
+	printf("%d\n", PostfixNotation(infix2));
+	const char* infix3 = "(45+98])";	//异常退出
+	printf("%d\n", PostfixNotation(infix3));
+
+	return 0;
 }
+
+//int main()
+//{
+//	Detection("[{(CLANNAD)]AIR");	//栈的平衡符号应用
+//}
 
 //int main()
 //{
