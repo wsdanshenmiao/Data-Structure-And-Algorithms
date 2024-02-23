@@ -1,0 +1,3 @@
+﻿  QueueLinkedList.c
+D:\Git版本管理\数据结构\队列\队列\Source File\QueueLinkedList.c(22,2): warning C4133: “return”: 从“Queue *”到“Node *”的类型不兼容
+  队列.vcxproj -> D:\Git版本管理\数据结构\队列\Build\bin\x64\Debug\队列.exe
