@@ -144,9 +144,11 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Source File\main.c" />
+    <ClCompile Include="Source File\QueueArray.c" />
     <ClCompile Include="Source File\QueueLinkedList.c" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Source File\QueueArray.h" />
     <ClInclude Include="Source File\QueueLinkedList.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

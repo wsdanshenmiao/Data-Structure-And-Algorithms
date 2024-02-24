@@ -21,9 +21,15 @@
     <ClCompile Include="Source File\QueueLinkedList.c">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="Source File\QueueArray.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Source File\QueueLinkedList.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Source File\QueueArray.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
