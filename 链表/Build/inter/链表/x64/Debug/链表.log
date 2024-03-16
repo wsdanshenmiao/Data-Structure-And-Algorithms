@@ -1,5 +1,0 @@
-﻿  Linked list.c
-  main.c
-D:\Git版本管理\数据结构\链表\链表\Source File\Linked list.h(1,1): warning C4828: 文件包含在偏移 0x227 处开始的字符，该字符在当前源字符集中无效(代码页 936)。
-  正在生成代码...
-  链表.vcxproj -> D:\Git版本管理\数据结构\链表\Build\bin\x64\Debug\链表.exe
