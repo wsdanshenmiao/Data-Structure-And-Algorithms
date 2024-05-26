@@ -31,10 +31,10 @@ bool Priority(char operator1, char operator2)	//判断两个符号优先级
 			return true;
 		}
 	case '+':
-	case '-':
-		if (operator2 == '+' || operator2 == '-') {
-			return true;
-		}
+	case '-':	//同级别时在前的优先级高
+		//if (operator2 == '+' || operator2 == '-') {
+		//	return true;
+		//}
 		return false;
 	}
 	printf("error in label");
@@ -47,16 +47,16 @@ void Calculate(const char operator, Node* const calculateStack)
 	int num2 = l_TopAndPop(calculateStack);
 	switch (operator) {
 	case '+':
-		l_Push(num1 + num2, calculateStack);
+		l_Push(num2 + num1, calculateStack);
 		break;
 	case '-':
-		l_Push(num1 - num2, calculateStack);
+		l_Push(num2 - num1, calculateStack);
 		break;
 	case '*':
-		l_Push(num1 * num2, calculateStack);
+		l_Push(num2 * num1, calculateStack);
 		break;
 	case '/':
-		l_Push(num1 / num2, calculateStack);
+		l_Push(num2 / num1, calculateStack);
 		break;
 	}
 }

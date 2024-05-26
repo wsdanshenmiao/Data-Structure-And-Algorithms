@@ -1,2 +1,3 @@
-﻿  main.c
+﻿  PostfixNotation.c
+D:\Git版本管理\数据结构\栈\栈\Source File\PostfixNotation.c(75,37): warning C4090: “函数”: 不同的“const”限定符
   栈.vcxproj -> D:\Git版本管理\数据结构\栈\Build\bin\x64\Debug\栈.exe

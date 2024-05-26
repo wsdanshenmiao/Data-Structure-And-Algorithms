@@ -9,10 +9,16 @@
 int main()
 {
 	//≤‚ ‘
+	const char* infix6 = "10-(80+50) * 7 +4/2";
+	printf("%d\n", PostfixNotation(infix6));
+	const char* infix5 = "10-80+50";
+	printf("%d\n", PostfixNotation(infix5));
 	const char* infix1 = "10+80+60";
 	printf("%d\n", PostfixNotation(infix1));
 	const char* infix2 = "12 + 2 * 3 + ( 3 * 4 + 14 ) * 4";
 	printf("%d\n", PostfixNotation(infix2));
+	const char* infix4 = "60*(12+34)/2";
+	printf("%d\n", PostfixNotation(infix4));
 	const char* infix3 = "(45+98])";	//“Ï≥£ÕÀ≥ˆ
 	printf("%d\n", PostfixNotation(infix3));
 
