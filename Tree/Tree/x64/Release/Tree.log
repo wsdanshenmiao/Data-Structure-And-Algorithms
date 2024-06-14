@@ -1,0 +1,7 @@
+﻿  main.cpp
+D:\Code\Data Structure\Tree\Tree\Source File\Tree.hpp(258,21): warning C4552: ”>>“: 未使用表达式结果
+  正在生成代码
+  Previous IPDB not found, fall back to full compilation.
+  All 67 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  已完成代码的生成
+  Tree.vcxproj -> D:\Code\Data Structure\Tree\x64\Release\Tree.exe

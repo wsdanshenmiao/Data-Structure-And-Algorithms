@@ -62,15 +62,15 @@ public:
 	inline virtual TreeNode* Insert(const KeyType& key);	// 插入节点
 	inline virtual bool Delete(const KeyType& key);	// 删除节点
 	inline TreeNode* Find(const KeyType& key) const;	// 查找元素
-	inline TreeNode* FindMax(TreeNode* node = m_Head) const;	// 寻找某个节点的下的最大值，默认为头节点，也就是整棵树
-	inline TreeNode* FindMin(TreeNode* node = m_Head) const;	// 寻找某个节点的下的最小值，默认为头节点，也就是整棵树
+	inline TreeNode* FindMax(TreeNode* node) const;	// 寻找某个节点的下的最大值，默认为根节点，也就是整棵树
+	inline TreeNode* FindMin(TreeNode* node) const;	// 寻找某个节点的下的最小值，默认为根节点，也就是整棵树
 
 protected:
 	inline TreeNode* _Insert(const KeyType& key, TreeNode* node, TreeNode* parent);	// 插入的递归实现
 	inline std::pair<bool, TreeNode*> UpdataHeadI(const KeyType& key);	// 更新头节点，插入版
-	inline bool UpdataHeadD(const KeyType& key);	// 更新头节点,删除版
 	inline bool IsRight(const TreeNode* node) const;
 	inline bool IsLeft(const TreeNode* node) const;
+	inline void _Delete(TreeNode* node);
 
 private:
 	TreeNode* m_Head;
@@ -217,47 +217,68 @@ inline TreeNode<K>* Tree<K, C>::FindMin(TreeNode* node) const
 
 
 
-template <typename K, typename C>
-inline bool Tree<K, C>::UpdataHeadD(const K& key)	// 更新头节点
-{
-	TreeNode* left = m_Head->m_Left, * right = m_Head->m_Right;
-	if (left->m_Key != key && right->m_Key != key) {
-		return false;
-	}
 
+template <typename K, typename C>
+inline void Tree<K, C>::_Delete(TreeNode* deNode)
+{
 	DSM::allocator<TreeNode> nAllo;
 	DSM::allocator<K> kAllo;
-	TreeNode* deNode= nullptr;
-	if (m_Head->m_Parent->m_Key == key) {	// 要删除头节点时
-		if (IsLeft(m_Head->m_Parent)) {	// 头节点的左指针指向根节点
-			deNode = left;
-			m_Head->m_Left = left->m_Right;
-			m_Head->m_Parent = left->m_Right;
-			left->m_Right->m_Parent = m_Head;
+	TreeNode* parent = deNode->m_Parent;
+
+	if (deNode->m_Key == m_Head->m_Parent->m_Key && !(deNode->m_Left && deNode->m_Right)) {
+		if (IsLeft(deNode)) {
+			m_Head->m_Parent = deNode->m_Right;
+			if (deNode->m_Right) {
+				deNode->m_Right->m_Parent = m_Head;
+			}
+			m_Head->m_Left = deNode->m_Right;
 		}
-		else {	// 头节点的右指针指向根节点
-			deNode = right;
-			m_Head->m_Right = left->m_Left;
-			m_Head->m_Parent = left->m_Left;
-			left->m_Left->m_Parent = m_Head;
+		else {
+			m_Head->m_Parent = deNode->m_Left;
+			if (deNode->m_Left) {
+				deNode->m_Left->m_Parent = m_Head;
+			}
+			m_Head->m_Right = deNode->m_Left;
 		}
 	}
-	else if (left->m_Key == key) {
-		m_Head->m_Left = left->m_Parent;
-		left->m_Parent->m_Left = nullptr;
-		deNode = left;
+	else if (deNode->m_Left && deNode->m_Right) {
+		TreeNode* replace = FindMin(deNode->m_Right);
+		K tmpKey = replace->m_Key;
+		_Delete(replace);
+		memcpy(&deNode->m_Key, &tmpKey, sizeof(K));
+		return;
 	}
-	else if (right->m_Key == key) {
-		m_Head->m_Right = right->m_Parent;
-		right->m_Parent->m_Right = nullptr;
-		deNode = right;
+	else if (!deNode->m_Left && !deNode->m_Right) {
+		if (IsLeft(deNode)) {
+			parent->m_Left = nullptr;
+		}
+		else {
+			parent->m_Right = nullptr;
+		}
+	}
+	else {
+		if (deNode->m_Left) {
+			if (IsLeft(deNode)) {
+				parent->m_Left = deNode->m_Left;
+			}
+			else {
+				parent->m_Right = deNode->m_Left;
+			}
+			deNode->m_Left->m_Parent = parent;
+		}
+		else {
+			if (IsLeft(deNode)) {
+				parent->m_Left = deNode->m_Right;
+			}
+			else {
+				parent->m_Right = deNode->m_Right;
+			}
+			deNode->m_Right->m_Parent = parent;
+		}
 	}
 	kAllo.destroy(&deNode->m_Key);
 	nAllo.destroy(deNode);
 	nAllo.deallocate(deNode, 1);
-
-	return true;
-
 }
 
 template <typename K, typename C>
@@ -266,41 +287,19 @@ inline bool Tree<K, C>::Delete(const K& key)
 	if (!m_Head->m_Parent) {
 		return false;
 	}
-	if (UpdataHeadD(key)) {	// 要删除的元素为最大或最小，已处理只有一个元素的情况
-		--m_Size;
-		return true;
-	}
 
 	TreeNode* deNode = Find(key);
 	if (!deNode) {
 		return false;
 	}
 
-	DSM::allocator<TreeNode> nAllo;
-	DSM::allocator<K> kAllo;
-	TreeNode* parent = deNode->m_Parent;
-	if (deNode->m_Left && deNode->m_Right) {	// 有两个子节点
-		TreeNode* replace = FindMin(deNode->m_Right);
-		memcpy(&deNode->m_Key, &replace->m_Key, sizeof(K));
-		deNode = replace;
-		parent = replace->m_Parent;
-	}
-	if (IsLeft(deNode)) {
-		parent->m_Left = deNode->m_Left;
-		if (deNode->m_Left) {
-			deNode->m_Left->m_Parent = parent;
-		}
-	}
-	else {
-		parent->m_Right = deNode->m_Right;
-		if (deNode->m_Right) {
-			deNode->m_Right->m_Parent = parent;
-		}
-	}
-	kAllo.destroy(&deNode->m_Key);
-	nAllo.destroy(deNode);
-	nAllo.deallocate(deNode, 1);
+	_Delete(deNode);
+	
 	--m_Size;
+	if (m_Size > 1) {
+		m_Head->m_Left = FindMin(m_Head->m_Parent);
+		m_Head->m_Right = FindMax(m_Head->m_Parent);
+	}
 
 	return true;
 }
@@ -309,7 +308,9 @@ inline bool Tree<K, C>::Delete(const K& key)
 template <typename K, typename C>
 inline void Tree<K, C>::MakeEmpty()
 {
-
+	while (m_Size) {
+		Delete(m_Head->m_Left->m_Key);
+	}
 }
 
 
