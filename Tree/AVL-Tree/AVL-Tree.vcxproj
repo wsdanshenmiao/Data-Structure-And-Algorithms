@@ -24,7 +24,6 @@
   <ItemGroup>
     <ClInclude Include="Source File\allocator.hpp" />
     <ClInclude Include="Source File\AVLTree.hpp" />
-    <ClInclude Include="Source File\Tree.hpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>

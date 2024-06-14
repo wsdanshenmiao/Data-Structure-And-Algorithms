@@ -26,8 +26,5 @@
     <ClInclude Include="Source File\allocator.hpp">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="Source File\Tree.hpp">
-      <Filter>头文件</Filter>
-    </ClInclude>
   </ItemGroup>
 </Project>
