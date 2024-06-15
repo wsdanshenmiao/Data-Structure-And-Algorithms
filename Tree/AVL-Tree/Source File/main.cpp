@@ -12,7 +12,7 @@ int main()
 	for (size_t i = 0; i < 1000; ++i) {
 		tree.Insert(dist(e));
 	}
-	for (size_t i = 0; i < 1000; ++i) {
+	for (size_t i = 0; i < 10000; ++i) {
 		size_t data = dist(e);
 		tree.Delete(data);
 	}

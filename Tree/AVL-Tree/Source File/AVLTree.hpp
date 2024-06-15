@@ -51,6 +51,7 @@ private:
 	inline std::pair<bool, Node*> _Delete(const KeyType& key, Node* node, Node* parent);
 
 	inline int Height(const Node* node) const;	// 获取节点高度，若为空则返回-1
+	inline bool HaveChild(Node* node) const;
 
 	inline Node* LeftSingleRotate(Node* node);	// 左旋
 	inline Node* RightSingleRotate(Node* node);	// 右旋
@@ -128,6 +129,13 @@ inline int AVLTree<K, C>::Height(const AVLTreeNode<K>* node) const
 {
 	return node ? node->m_Height : -1;
 }
+
+template <typename K, typename C>
+inline bool AVLTree<K, C>::HaveChild(Node* node) const
+{
+	return node->m_Left && node->m_Right;
+}
+
 
 
 
@@ -252,24 +260,42 @@ AVLTree<K, C>::_Delete(const K& key, Node* node, Node* parent)
 	if (key < node->m_Key) {
 		mes = _Delete(key, node->m_Left, node);
 		node->m_Left = mes.second;
+		if (Height(node->m_Right) - Height(node->m_Left) == 2) {
+			Node* tmp = node->m_Right;
+			Node* changeNode = Height(tmp->m_Right) > Height(tmp->m_Left) ? RightSingleRotate(node) : RightDoubleRotate(node);
+			m_Root = node == m_Root ? changeNode : m_Root;
+			node = changeNode;
+		}
 	}
 	else if (key > node->m_Key) {
 		mes = _Delete(key, node->m_Right, node);
 		node->m_Right = mes.second;
+		if (Height(node->m_Left) - Height(node->m_Right) == 2) {
+			Node* tmp = node->m_Left;
+			Node* changeNode = Height(tmp->m_Left) > Height(tmp->m_Right) ? LeftSingleRotate(node) : LeftDoubleRotate(node);
+			m_Root = node == m_Root ? changeNode : m_Root;
+			node = changeNode;
+		}
 	}
 	else {
 		if (node->m_Left && node->m_Right) {
-			Node* replace = FindMin(node->m_Right);
+			Node* replace = FindMin(node->m_Right);	// 寻找替代节点
 			K data = replace->m_Key;
-			mes = _Delete(data, node->m_Right, node);
+			mes = _Delete(data, node->m_Right, node);	// 删除替代节点
 			node->m_Right = mes.second;
 			memcpy(&node->m_Key, &data, sizeof(K));
+			if (Height(node->m_Left) - Height(node->m_Right) == 2) {
+				Node* tmp = node->m_Left;
+				Node* changeNode = Height(tmp->m_Left) > Height(tmp->m_Right) ? LeftSingleRotate(node) : LeftDoubleRotate(node);
+				m_Root = node == m_Root ? changeNode : m_Root;
+				node = changeNode;
+			}
 		}
 		else {
 			Node* changeNode;
 			if (parent->m_Left == node) {
 				parent->m_Left = node->m_Left ? node->m_Left : node->m_Right;
-				changeNode = parent->m_Left;
+				changeNode = parent->m_Left;	// 防止递归回溯时改变树的结构
 			}
 			else {
 				parent->m_Right = node->m_Right ? node->m_Right : node->m_Left;
@@ -280,10 +306,11 @@ AVLTree<K, C>::_Delete(const K& key, Node* node, Node* parent)
 			kallo.destroy(&node->m_Key);
 			nallo.destroy(node);
 			nallo.deallocate(node, 1);
-			node = changeNode;
-			mes = { true,node };
+			return { true,changeNode };
 		}
 	}
+	node->m_Height = std::max(Height(node->m_Left), Height(node->m_Right)) + 1;
+	
 	return { mes.first,node };
 }
 
