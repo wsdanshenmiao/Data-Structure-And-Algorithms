@@ -40,15 +40,18 @@ public:
 	~AVLTree();
 
 	inline Node* Find(const KeyType& key) const;
-	inline Node* FindMax(const Node* node) const;
-	inline Node* FindMin(const Node* node) const;
+	inline Node* FindMax(Node* node) const;
+	inline Node* FindMin(Node* node) const;
 	inline std::pair<bool, Node*> Insert(const KeyType& key);
+	inline std::pair<bool, Node*> Delete(const KeyType& key);
+	inline size_t Size() { return m_Size; }
 
 private:
 	inline std::pair<bool, Node*> _Insert(const KeyType& key, Node* node, Node* parent);
-	inline bool IsRight(const Node* node) const;	// 判断是否是右子树
-	inline bool IsLeft(const Node* node) const;	// 判断是否是左子树
+	inline std::pair<bool, Node*> _Delete(const KeyType& key, Node* node, Node* parent);
+
 	inline int Height(const Node* node) const;	// 获取节点高度，若为空则返回-1
+
 	inline Node* LeftSingleRotate(Node* node);	// 左旋
 	inline Node* RightSingleRotate(Node* node);	// 右旋
 	inline Node* LeftDoubleRotate(Node* node);	// 左右旋
@@ -93,7 +96,7 @@ AVLTree<K, C>::Find(const K& key) const
 
 template <typename K, typename C>
 inline AVLTreeNode<K>* 
-AVLTree<K, C>::FindMax(const AVLTreeNode<K>* node) const
+AVLTree<K, C>::FindMax(AVLTreeNode<K>* node) const
 {
 	if (!node) {
 		return node;
@@ -106,7 +109,7 @@ AVLTree<K, C>::FindMax(const AVLTreeNode<K>* node) const
 
 template <typename K, typename C>
 inline AVLTreeNode<K>* 
-AVLTree<K, C>::FindMin(const AVLTreeNode<K>* node) const
+AVLTree<K, C>::FindMin(AVLTreeNode<K>* node) const
 {
 	if (!node) {
 		return node;
@@ -119,18 +122,6 @@ AVLTree<K, C>::FindMin(const AVLTreeNode<K>* node) const
 
 
 
-
-template <typename K, typename C>
-inline bool AVLTree<K, C>::IsLeft(const AVLTreeNode<K>* node) const
-{
-	return node->m_Parent->m_Left == node;
-}
-
-template <typename K, typename C>
-inline bool AVLTree<K, C>::IsRight(const AVLTreeNode<K>* node) const
-{
-	return node->m_Parent->right == node;
-}
 
 template <typename K, typename C>
 inline int AVLTree<K, C>::Height(const AVLTreeNode<K>* node) const
@@ -248,6 +239,81 @@ AVLTree<K, C>::Insert(const K& key)
 	return ret;
 }
 
+
+template <typename K, typename C>
+inline std::pair<bool, AVLTreeNode<K>*>
+AVLTree<K, C>::_Delete(const K& key, Node* node, Node* parent)
+{
+	if (!node) {
+		return { false,nullptr };
+	}
+
+	std::pair<bool, Node*> mes;
+	if (key < node->m_Key) {
+		mes = _Delete(key, node->m_Left, node);
+		node->m_Left = mes.second;
+	}
+	else if (key > node->m_Key) {
+		mes = _Delete(key, node->m_Right, node);
+		node->m_Right = mes.second;
+	}
+	else {
+		if (node->m_Left && node->m_Right) {
+			Node* replace = FindMin(node->m_Right);
+			K data = replace->m_Key;
+			mes = _Delete(data, node->m_Right, node);
+			node->m_Right = mes.second;
+			memcpy(&node->m_Key, &data, sizeof(K));
+		}
+		else {
+			Node* changeNode;
+			if (parent->m_Left == node) {
+				parent->m_Left = node->m_Left ? node->m_Left : node->m_Right;
+				changeNode = parent->m_Left;
+			}
+			else {
+				parent->m_Right = node->m_Right ? node->m_Right : node->m_Left;
+				changeNode = parent->m_Right;
+			}
+			NAllocator nallo;
+			KAllocator kallo;
+			kallo.destroy(&node->m_Key);
+			nallo.destroy(node);
+			nallo.deallocate(node, 1);
+			node = changeNode;
+			mes = { true,node };
+		}
+	}
+	return { mes.first,node };
+}
+
+template <typename K, typename C>
+inline std::pair<bool, AVLTreeNode<K>*>
+AVLTree<K, C>::Delete(const K& key)
+{
+	if (!m_Root) {
+		return { false, m_Root };
+	}
+	
+	if (m_Root->m_Key == key && !m_Root->m_Left || !m_Root->m_Right) {
+		Node* node = m_Root;
+		m_Root = m_Root->m_Left ? m_Root->m_Left : m_Root->m_Right;
+		NAllocator nallo;
+		KAllocator kallo;
+		kallo.destroy(&node->m_Key);
+		nallo.destroy(node);
+		nallo.deallocate(node, 1);
+		m_Size--;
+		return { true,nullptr };
+	}
+
+	auto mes = _Delete(key, m_Root, nullptr);
+	if (mes.first) {
+		--m_Size;
+	}
+
+	return mes;
+}
 
 
 
