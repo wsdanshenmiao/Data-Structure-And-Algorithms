@@ -1,0 +1,137 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Code\\Data Structure\\Stack\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{CF55F29F-DD55-4BE9-A9A8-4CDAD7A75785}|\u6808\\\u6808.vcxproj|D:\\Code\\Data Structure\\Stack\\\u6808\\Source File\\main.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{CF55F29F-DD55-4BE9-A9A8-4CDAD7A75785}|\u6808\\\u6808.vcxproj|solutionrelative:\u6808\\Source File\\main.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CF55F29F-DD55-4BE9-A9A8-4CDAD7A75785}|\u6808\\\u6808.vcxproj|D:\\Code\\Data Structure\\Stack\\\u6808\\Source File\\PostfixNotation.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{CF55F29F-DD55-4BE9-A9A8-4CDAD7A75785}|\u6808\\\u6808.vcxproj|solutionrelative:\u6808\\Source File\\PostfixNotation.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CF55F29F-DD55-4BE9-A9A8-4CDAD7A75785}|\u6808\\\u6808.vcxproj|D:\\Code\\Data Structure\\Stack\\\u6808\\Source File\\StackWithLinkedList.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{CF55F29F-DD55-4BE9-A9A8-4CDAD7A75785}|\u6808\\\u6808.vcxproj|solutionrelative:\u6808\\Source File\\StackWithLinkedList.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CF55F29F-DD55-4BE9-A9A8-4CDAD7A75785}|\u6808\\\u6808.vcxproj|D:\\Code\\Data Structure\\Stack\\\u6808\\Source File\\Detection.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{CF55F29F-DD55-4BE9-A9A8-4CDAD7A75785}|\u6808\\\u6808.vcxproj|solutionrelative:\u6808\\Source File\\Detection.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CF55F29F-DD55-4BE9-A9A8-4CDAD7A75785}|\u6808\\\u6808.vcxproj|D:\\Code\\Data Structure\\Stack\\\u6808\\Source File\\PostfixNotation.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{CF55F29F-DD55-4BE9-A9A8-4CDAD7A75785}|\u6808\\\u6808.vcxproj|solutionrelative:\u6808\\Source File\\PostfixNotation.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CF55F29F-DD55-4BE9-A9A8-4CDAD7A75785}|\u6808\\\u6808.vcxproj|D:\\Code\\Data Structure\\Stack\\\u6808\\Source File\\StackWithLinkedList.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{CF55F29F-DD55-4BE9-A9A8-4CDAD7A75785}|\u6808\\\u6808.vcxproj|solutionrelative:\u6808\\Source File\\StackWithLinkedList.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 1,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedHeight": 283,
+          "SelectedChildIndex": 10,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Detection.c",
+              "DocumentMoniker": "D:\\Code\\Data Structure\\Stack\\\u6808\\Source File\\Detection.c",
+              "RelativeDocumentMoniker": "\u6808\\Source File\\Detection.c",
+              "ToolTip": "D:\\Code\\Data Structure\\Stack\\\u6808\\Source File\\Detection.c",
+              "RelativeToolTip": "\u6808\\Source File\\Detection.c",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
+              "WhenOpened": "2024-11-19T13:14:20.899Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "PostfixNotation.c",
+              "DocumentMoniker": "D:\\Code\\Data Structure\\Stack\\\u6808\\Source File\\PostfixNotation.c",
+              "RelativeDocumentMoniker": "\u6808\\Source File\\PostfixNotation.c",
+              "ToolTip": "D:\\Code\\Data Structure\\Stack\\\u6808\\Source File\\PostfixNotation.c",
+              "RelativeToolTip": "\u6808\\Source File\\PostfixNotation.c",
+              "ViewState": "AQIAABAAAAAAAAAAAAAawCMAAAARAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
+              "WhenOpened": "2024-11-19T13:14:20.975Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "StackWithLinkedList.h",
+              "DocumentMoniker": "D:\\Code\\Data Structure\\Stack\\\u6808\\Source File\\StackWithLinkedList.h",
+              "RelativeDocumentMoniker": "\u6808\\Source File\\StackWithLinkedList.h",
+              "ToolTip": "D:\\Code\\Data Structure\\Stack\\\u6808\\Source File\\StackWithLinkedList.h",
+              "RelativeToolTip": "\u6808\\Source File\\StackWithLinkedList.h",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAeAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-11-19T13:14:20.975Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "StackWithLinkedList.c",
+              "DocumentMoniker": "D:\\Code\\Data Structure\\Stack\\\u6808\\Source File\\StackWithLinkedList.c",
+              "RelativeDocumentMoniker": "\u6808\\Source File\\StackWithLinkedList.c",
+              "ToolTip": "D:\\Code\\Data Structure\\Stack\\\u6808\\Source File\\StackWithLinkedList.c",
+              "RelativeToolTip": "\u6808\\Source File\\StackWithLinkedList.c",
+              "ViewState": "AQIAACcAAAAAAAAAAAAawDIAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
+              "WhenOpened": "2024-11-19T13:14:20.975Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "PostfixNotation.h",
+              "DocumentMoniker": "D:\\Code\\Data Structure\\Stack\\\u6808\\Source File\\PostfixNotation.h",
+              "RelativeDocumentMoniker": "\u6808\\Source File\\PostfixNotation.h",
+              "ToolTip": "D:\\Code\\Data Structure\\Stack\\\u6808\\Source File\\PostfixNotation.h",
+              "RelativeToolTip": "\u6808\\Source File\\PostfixNotation.h",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAABAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-11-19T13:14:20.975Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "main.c",
+              "DocumentMoniker": "D:\\Code\\Data Structure\\Stack\\\u6808\\Source File\\main.c",
+              "RelativeDocumentMoniker": "\u6808\\Source File\\main.c",
+              "ToolTip": "D:\\Code\\Data Structure\\Stack\\\u6808\\Source File\\main.c",
+              "RelativeToolTip": "\u6808\\Source File\\main.c",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAA0AAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
+              "WhenOpened": "2024-11-19T13:14:20.999Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
