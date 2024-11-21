@@ -1,0 +1,139 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Code\\Data Structure And Algorithms\\UnionFind\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{B685D03B-FB69-4F2D-BEAD-1C06E338D13E}|UnionFind\\UnionFind.vcxproj|D:\\Code\\Data Structure And Algorithms\\UnionFind\\UnionFind\\Source File\\PercolationStats.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{B685D03B-FB69-4F2D-BEAD-1C06E338D13E}|UnionFind\\UnionFind.vcxproj|solutionrelative:UnionFind\\Source File\\PercolationStats.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B685D03B-FB69-4F2D-BEAD-1C06E338D13E}|UnionFind\\UnionFind.vcxproj|D:\\Code\\Data Structure And Algorithms\\UnionFind\\UnionFind\\Source File\\IUnionFind.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{B685D03B-FB69-4F2D-BEAD-1C06E338D13E}|UnionFind\\UnionFind.vcxproj|solutionrelative:UnionFind\\Source File\\IUnionFind.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B685D03B-FB69-4F2D-BEAD-1C06E338D13E}|UnionFind\\UnionFind.vcxproj|D:\\Code\\Data Structure And Algorithms\\UnionFind\\UnionFind\\Source File\\Percolation.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{B685D03B-FB69-4F2D-BEAD-1C06E338D13E}|UnionFind\\UnionFind.vcxproj|solutionrelative:UnionFind\\Source File\\Percolation.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B685D03B-FB69-4F2D-BEAD-1C06E338D13E}|UnionFind\\UnionFind.vcxproj|D:\\Code\\Data Structure And Algorithms\\UnionFind\\UnionFind\\Source File\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{B685D03B-FB69-4F2D-BEAD-1C06E338D13E}|UnionFind\\UnionFind.vcxproj|solutionrelative:UnionFind\\Source File\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B685D03B-FB69-4F2D-BEAD-1C06E338D13E}|UnionFind\\UnionFind.vcxproj|D:\\Code\\Data Structure And Algorithms\\UnionFind\\UnionFind\\Source File\\QuickFind.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{B685D03B-FB69-4F2D-BEAD-1C06E338D13E}|UnionFind\\UnionFind.vcxproj|solutionrelative:UnionFind\\Source File\\QuickFind.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B685D03B-FB69-4F2D-BEAD-1C06E338D13E}|UnionFind\\UnionFind.vcxproj|D:\\Code\\Data Structure And Algorithms\\UnionFind\\UnionFind\\Source File\\Percolation.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{B685D03B-FB69-4F2D-BEAD-1C06E338D13E}|UnionFind\\UnionFind.vcxproj|solutionrelative:UnionFind\\Source File\\Percolation.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 241,
+          "SelectedChildIndex": 5,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "PercolationStats.h",
+              "DocumentMoniker": "D:\\Code\\Data Structure And Algorithms\\UnionFind\\UnionFind\\Source File\\PercolationStats.h",
+              "RelativeDocumentMoniker": "UnionFind\\Source File\\PercolationStats.h",
+              "ToolTip": "D:\\Code\\Data Structure And Algorithms\\UnionFind\\UnionFind\\Source File\\PercolationStats.h*",
+              "RelativeToolTip": "UnionFind\\Source File\\PercolationStats.h*",
+              "ViewState": "AgIAACIAAAAAAAAAAAAAwC0AAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-11-21T15:12:36.62Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Percolation.cpp",
+              "DocumentMoniker": "D:\\Code\\Data Structure And Algorithms\\UnionFind\\UnionFind\\Source File\\Percolation.cpp",
+              "RelativeDocumentMoniker": "UnionFind\\Source File\\Percolation.cpp",
+              "ToolTip": "D:\\Code\\Data Structure And Algorithms\\UnionFind\\UnionFind\\Source File\\Percolation.cpp",
+              "RelativeToolTip": "UnionFind\\Source File\\Percolation.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAwAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-11-21T15:08:07.105Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Percolation.h",
+              "DocumentMoniker": "D:\\Code\\Data Structure And Algorithms\\UnionFind\\UnionFind\\Source File\\Percolation.h",
+              "RelativeDocumentMoniker": "UnionFind\\Source File\\Percolation.h",
+              "ToolTip": "D:\\Code\\Data Structure And Algorithms\\UnionFind\\UnionFind\\Source File\\Percolation.h",
+              "RelativeToolTip": "UnionFind\\Source File\\Percolation.h",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAUwAkAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-11-21T14:36:56.995Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "QuickFind.h",
+              "DocumentMoniker": "D:\\Code\\Data Structure And Algorithms\\UnionFind\\UnionFind\\Source File\\QuickFind.h",
+              "RelativeDocumentMoniker": "UnionFind\\Source File\\QuickFind.h",
+              "ToolTip": "D:\\Code\\Data Structure And Algorithms\\UnionFind\\UnionFind\\Source File\\QuickFind.h",
+              "RelativeToolTip": "UnionFind\\Source File\\QuickFind.h",
+              "ViewState": "AgIAAB0AAAAAAAAAAAAAwCMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-11-21T04:35:12.917Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "IUnionFind.h",
+              "DocumentMoniker": "D:\\Code\\Data Structure And Algorithms\\UnionFind\\UnionFind\\Source File\\IUnionFind.h",
+              "RelativeDocumentMoniker": "UnionFind\\Source File\\IUnionFind.h",
+              "ToolTip": "D:\\Code\\Data Structure And Algorithms\\UnionFind\\UnionFind\\Source File\\IUnionFind.h",
+              "RelativeToolTip": "UnionFind\\Source File\\IUnionFind.h",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-11-21T04:27:51.769Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "main.cpp",
+              "DocumentMoniker": "D:\\Code\\Data Structure And Algorithms\\UnionFind\\UnionFind\\Source File\\main.cpp",
+              "RelativeDocumentMoniker": "UnionFind\\Source File\\main.cpp",
+              "ToolTip": "D:\\Code\\Data Structure And Algorithms\\UnionFind\\UnionFind\\Source File\\main.cpp",
+              "RelativeToolTip": "UnionFind\\Source File\\main.cpp",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAAwAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-11-21T04:27:23.96Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
