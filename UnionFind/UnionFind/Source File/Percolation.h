@@ -30,11 +30,16 @@ namespace DSM {
 		// 当第一行某一点与最后一行某一点联通时渗透
 		bool Percolates() const noexcept;
 
+		void Reset(const std::size_t& count) noexcept;
+
 		bool OutOfRange(
 			const std::size_t& row,
 			const std::size_t& col,
 			const std::size_t& min,
 			const std::size_t& max) const noexcept;
+
+	private:
+		void Init(const std::size_t& count) noexcept;
 
 	private:
 		std::vector<bool> m_Grid;

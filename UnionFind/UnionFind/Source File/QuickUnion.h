@@ -1,20 +1,16 @@
 #pragma once
-#ifndef __QUICKFIND__H__
-#define __QUICKFIND__H__
+#ifndef __QUICKUNION__H__
+#define __QUICKUNION__H__
 
 #include "IUnionFind.h"
 
 namespace DSM {
 
-	/// <summary>
-	/// 查找很快速的并查集
-	/// </summary>
-	/// <typeparam name="N"></typeparam>
-	class QuickFind : public IUnionFind
+	class QuickUnion : public IUnionFind
 	{
 	public:
-		QuickFind() = default;
-		QuickFind(const std::size_t& size) noexcept;
+		QuickUnion() = default;
+		QuickUnion(const std::size_t& size) noexcept;
 
 		void Union(const std::size_t& p, const std::size_t& q) noexcept override;
 		bool Connected(const std::size_t& p, const std::size_t& q) noexcept override;
@@ -27,9 +23,6 @@ namespace DSM {
 		std::size_t m_Count = 0;
 	};
 
-
-
 }
 
-
-#endif // !__QUICKFIND__H__
+#endif // !__QUICKUNION__H__

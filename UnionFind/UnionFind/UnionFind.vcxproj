@@ -21,12 +21,18 @@
   <ItemGroup>
     <ClCompile Include="Source File\main.cpp" />
     <ClCompile Include="Source File\Percolation.cpp" />
+    <ClCompile Include="Source File\QuickFind.cpp" />
+    <ClCompile Include="Source File\QuickUnion.cpp" />
+    <ClCompile Include="Source File\WeightedQuickUnion.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Source File\Percolation.h" />
     <ClInclude Include="Source File\IUnionFind.h" />
     <ClInclude Include="Source File\PercolationStats.h" />
     <ClInclude Include="Source File\QuickFind.h" />
+    <ClInclude Include="Source File\QuickUnion.h" />
+    <ClInclude Include="Source File\Timer.h" />
+    <ClInclude Include="Source File\WeightedQuickUnion.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>

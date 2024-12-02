@@ -21,6 +21,15 @@
     <ClCompile Include="Source File\Percolation.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="Source File\QuickFind.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Source File\QuickUnion.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Source File\WeightedQuickUnion.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Source File\IUnionFind.h">
@@ -33,6 +42,15 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="Source File\PercolationStats.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Source File\Timer.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Source File\QuickUnion.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Source File\WeightedQuickUnion.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>

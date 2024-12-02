@@ -15,7 +15,6 @@ namespace DSM {
 		// perform independent trials on an n-by-n grid
 		PercolationStats(
 			const std::size_t& n,
-			const std::size_t& trials,
 			std::unique_ptr<IUnionFind> pUF);
 
 		// sample mean of percolation threshold
@@ -38,23 +37,20 @@ namespace DSM {
 	template<typename T, std::size_t N>
 	inline PercolationStats<T, N>::PercolationStats(
 		const std::size_t& n,
-		const std::size_t& trials,
 		std::unique_ptr<IUnionFind> pUF)
 	{
 		if (n == 0) throw std::out_of_range("n should more than 0");
-		decltype(auto) ruf = *pUF;
-		std::cout << typeid(ruf).name();
-		auto uf = ruf;
 		std::random_device rd;
 		std::mt19937 gen(rd());
 		// 指定随机数的类型和范围
-		std::uniform_int_distribution<size_t> dis(0, n);
-		for (int i = 0; i < trials; ++i) {
-			Percolation p(n, std::make_unique<decltype(uf)>(uf));
+		Percolation p(n, std::move(pUF));
+		std::uniform_int_distribution<size_t> dis(0, n - 1);
+		for (std::size_t i = 0; i < N; ++i) {
 			while (!p.Percolates()) {
 				p.Open(dis(gen), dis(gen));
 			}
-			m_Result[i] = static_cast<T>(p.NumberOfOpenSites() / (n * n));
+			m_Result[i] = static_cast<T>(p.NumberOfOpenSites()) / (n * n);
+			p.Reset(n);
 		}
 	}
 

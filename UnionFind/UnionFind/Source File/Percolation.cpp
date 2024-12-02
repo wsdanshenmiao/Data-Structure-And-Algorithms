@@ -4,18 +4,7 @@ namespace DSM {
 
 	Percolation::Percolation(const std::size_t& count, std::unique_ptr<IUnionFind> uf) noexcept
 		:m_Count(count), m_UF(std::move(uf)) {
-		// init member
-		m_Grid.resize(count * count, false);
-		// 创建两个虚拟节点
-		// 将第一个虚拟节点和第一行链接
-		for (std::size_t i = 0; i < count; ++i) {
-			m_UF->Union(count * count, i);
-		}
-		std::size_t lastRow = count * (count - 1);
-		// 第二个虚拟节点和最后一行链接
-		for (std::size_t i = 0; i < count; ++i) {
-			m_UF->Union(count * count + 1, lastRow + i);
-		}
+		Init(count);
 	}
 
 	void Percolation::Open(const std::size_t& row, const std::size_t& col) noexcept
@@ -76,6 +65,12 @@ namespace DSM {
 			return true;
 		return false;
 	}
+
+	void Percolation::Reset(const std::size_t& count) noexcept
+	{
+		Init(count);
+	}
+
 	bool Percolation::OutOfRange(
 		const std::size_t& row,
 		const std::size_t& col,
@@ -83,5 +78,22 @@ namespace DSM {
 		const std::size_t& max) const noexcept
 	{
 		return !(min <= row && row <= max && min <= col && col <= max);
+	}
+	void Percolation::Init(const std::size_t& count) noexcept
+	{
+		m_UF->Reset(count * count + 2);
+		// init member
+		m_Grid.clear();
+		m_Grid.resize(count * count, false);
+		// 创建两个虚拟节点
+		// 将第一个虚拟节点和第一行链接
+		for (std::size_t i = 0; i < count; ++i) {
+			m_UF->Union(count * count, i);
+		}
+		std::size_t lastRow = count * (count - 1);
+		// 第二个虚拟节点和最后一行链接
+		for (std::size_t i = 0; i < count; ++i) {
+			m_UF->Union(count * count + 1, lastRow + i);
+		}
 	}
 }
